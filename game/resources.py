@@ -12,15 +12,18 @@ pyglet.resource.path = ['./resources']
 pyglet.resource.reindex()
 
 # Load the three main resources and get them to draw centered
-player_image = pyglet.resource.image("hero.png")
+player_image = pyglet.resource.image("pixelated_prince_full.png")
 center_image(player_image)
 
-monster_image = pyglet.resource.image("monster.png")
-center_image(monster_image)
+monster_image = pyglet.resource.image("PRINCE_SYMBOL_PURPLE_2016.png")
+center_image(monster_image) 
 
-background = pyglet.resource.image('background.png')
+time_image = pyglet.resource.image("digital_clock.png")
+center_image(time_image)
 
-# bullet_image = pyglet.resource.image("bullet.png")
+background = pyglet.resource.image('Prince_party.png')
+
+bullet_image = pyglet.resource.image("bullet.png")
 # center_image(bullet_image)
 
 # asteroid_image = pyglet.resource.image("asteroid.png")

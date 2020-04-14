@@ -5,11 +5,11 @@ from . import physicalobject, resources
 
 from random import randint
 
-class Monster(physicalobject.PhysicalObject):
+class Clock(physicalobject.PhysicalObject):
     """Physical object that responds to user input"""
 
     def __init__(self, *args, **kwargs):
-        super().__init__(img=resources.monster_image, *args, **kwargs)
+        super().__init__(img=resources.time_image, *args, **kwargs)
 
         self.counter = 0
         self.change_at = randint(50,100)
@@ -29,18 +29,18 @@ class Monster(physicalobject.PhysicalObject):
             self.randomize()
 
     def randomize(self):
-        self.velocity_x = randint(100, 300)
-        self.velocity_y = randint(100, 300)
+        self.velocity_x = randint(50, 200)
+        self.velocity_y = randint(50, 200)
         
         # This expression means: there is a 20%
         # chance we will change our horizontal direction.
         if randint(0, 100) > 20:
             self.velocity_x *= -1
             
-        # This expression means: there is a 50%
+        # This expression means: there is a 30%
         # chance we will change our vertical direction.
         if randint(0, 100) > 50:
-            self.velocity_y *= -1        
+            self.velocity_y *= -1     
 
     def delete(self):
         # We have a child sprite which must be deleted when this object
